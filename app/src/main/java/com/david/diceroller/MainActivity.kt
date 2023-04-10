@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +16,7 @@ class MainActivity : AppCompatActivity() {
                 rollDice()
             }
         }
+        txt()
     }
 
     private fun rollDice() {
@@ -32,6 +32,13 @@ class MainActivity : AppCompatActivity() {
             else -> R.drawable.dice_6
         }
         diceImage.setImageResource(drawableResource)
+
+    }
+    fun txt(){
+        val name: TextView = findViewById(R.id.TextView)
+        val nim: TextView = findViewById(R.id.txt2)
+        name.text = "David Nurdiansyah"
+        nim.text = "223307094"
 
     }
 }
